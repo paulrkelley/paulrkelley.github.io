@@ -60,6 +60,18 @@
             separation between higher-trust infrastructure and household systems.
         </p>
 
+        <figure class="architecture-figure">
+            <img
+                class="project-image"
+                src="../assets/images/dns-ntp/architecture.png"
+                alt="Conceptual DNS and NTP architecture showing separate lab and home trust domains, independent hardened Debian appliances, approved service paths, upstream DNS and NTP dependencies, and no cross-domain failover or management."
+                loading="lazy"
+            >
+            <figcaption>
+                Separate DNS and time infrastructure preserves the LAB and HOME trust boundary. Each appliance is independently operated and exposed only after validation.
+            </figcaption>
+        </figure>
+
         <h2>Key Technologies</h2>
         <ul class="tag-list large">
             <li>Debian</li>
@@ -105,7 +117,7 @@
         </div>
 
         <div class="image-placeholder">
-            <p><strong>Optional images:</strong> add an architecture diagram, appliance photo, or validation screenshot under <code>assets/images/dns-ntp/</code>.</p>
+            <p><strong>Physical appliance photo coming soon:</strong> this section will show the repurposed hardware running the dedicated DNS and NTP services. A sanitized validation screenshot can be added alongside it later.</p>
         </div>
     </div>
 </section>
