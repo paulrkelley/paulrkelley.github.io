@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure Homelab project by Paul Kelley — segmented, security-focused infrastructure architecture with explicit trust boundaries, identity, PKI, bastions, logging, and validation.">
+    <meta name="theme-color" content="#07111f">
+    <title>Secure Homelab | Paul Kelley</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav-container">
+        <a class="site-name" href="../index.html">Paul Kelley</a>
+        <nav aria-label="Primary navigation">
+            <a href="../index.html#projects">Projects</a>
+            <a href="https://github.com/paulrkelley" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/paulkelley1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="project-hero">
+    <div class="container narrow">
+        <a class="back-link" href="../index.html#projects">← Back to projects</a>
+        <p class="eyebrow">Infrastructure Architecture</p>
+        <h1>Secure Homelab</h1>
+        <p class="project-lead">
+            A production-inspired infrastructure environment designed around explicit trust boundaries, least privilege,
+            secure administration, centralized identity, PKI, segmentation, and verifiable controls.
+        </p>
+        <div class="hero-actions">
+            <a class="button primary" href="https://github.com/paulrkelley/secure-homelab-public" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container narrow project-content">
+        <h2>Overview</h2>
+        <p>
+            This project explores how enterprise infrastructure security concepts can be implemented in a homelab
+            environment without sacrificing operational usability.
+        </p>
+        <p>
+            Rather than treating the lab as a flat trusted network, systems are separated according to their role,
+            management requirements, and trust level.
+        </p>
+
+        <h2>Core Design Principles</h2>
+        <ul class="feature-list">
+            <li>Default-deny communication between trust zones</li>
+            <li>Separate management and service planes</li>
+            <li>Least-privilege administrative access</li>
+            <li>Dedicated bastion access paths</li>
+            <li>Short-lived identity and certificate workflows</li>
+            <li>Centralized logging and security monitoring</li>
+            <li>Documented and repeatable infrastructure builds</li>
+            <li>Independent break-glass recovery paths</li>
+        </ul>
+
+        <h2>Architecture</h2>
+        <p>
+            The environment separates infrastructure into security zones for network management, virtualization,
+            storage, Kubernetes, security systems, services, IoT, household systems, and high-trust Tier-0 infrastructure.
+        </p>
+        <div class="callout">
+            <strong>Architecture invariant:</strong> service membership and management membership are treated as independent privileges.
+        </div>
+
+        <h2>Key Technologies</h2>
+        <ul class="tag-list large">
+            <li>pfSense</li>
+            <li>Proxmox</li>
+            <li>Headscale</li>
+            <li>Authentik</li>
+            <li>Step CA</li>
+            <li>Security Onion</li>
+            <li>OpenMediaVault</li>
+            <li>Kubernetes</li>
+            <li>Linux</li>
+        </ul>
+
+        <h2>Validation</h2>
+        <p>
+            Firewall and trust-boundary changes are validated through repeatable connectivity tests rather than relying
+            only on configuration review.
+        </p>
+        <p>
+            The current validated baseline includes default-deny internal access for both LAB and HOME networks while
+            retaining approved DNS and Internet connectivity.
+        </p>
+
+        <h2>What This Project Demonstrates</h2>
+        <div class="skills-grid">
+            <div>
+                <h3>Architecture</h3>
+                <p>Designing systems around explicit trust boundaries and administrative pathways.</p>
+            </div>
+            <div>
+                <h3>Networking</h3>
+                <p>VLAN segmentation, firewall policy, routing, DNS, and management networks.</p>
+            </div>
+            <div>
+                <h3>Security Engineering</h3>
+                <p>Identity, PKI, bastions, least privilege, and defense in depth.</p>
+            </div>
+            <div>
+                <h3>Documentation</h3>
+                <p>Architecture requirements, validation evidence, operating procedures, and sanitized public documentation.</p>
+            </div>
+        </div>
+
+        <div class="image-placeholder">
+            <p><strong>Optional image:</strong> add an architecture diagram at <code>assets/images/secure-homelab/architecture-overview.png</code>.</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="container"><p>© 2026 Paul Kelley · Secure Homelab Project</p></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DNS and NTP appliance project by Paul Kelley — hardened foundational services separated by trust domain and validated before exposure.">
+    <meta name="theme-color" content="#07111f">
+    <title>DNS &amp; NTP Appliances | Paul Kelley</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav-container">
+        <a class="site-name" href="../index.html">Paul Kelley</a>
+        <nav aria-label="Primary navigation">
+            <a href="../index.html#projects">Projects</a>
+            <a href="https://github.com/paulrkelley" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/paulkelley1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="project-hero">
+    <div class="container narrow">
+        <a class="back-link" href="../index.html#projects">← Back to projects</a>
+        <p class="eyebrow">Foundational Infrastructure</p>
+        <h1>DNS &amp; NTP Appliances</h1>
+        <p class="project-lead">
+            Dedicated DNS and time infrastructure designed around separate trust domains, controlled exposure,
+            hardened Linux appliances, and validation-before-access.
+        </p>
+        <div class="hero-actions">
+            <a class="button primary" href="https://github.com/paulrkelley/secure-homelab-public/tree/main/projects/dns-ntp-appliances" target="_blank" rel="noopener noreferrer">View Project Repository</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container narrow project-content">
+        <h2>Objective</h2>
+        <p>
+            DNS and NTP are foundational services. Because many systems depend on them, the project treats their trust
+            relationships as an architectural decision rather than assuming that foundational services should be shared broadly.
+        </p>
+
+        <h2>Architecture</h2>
+        <div class="architecture-flow" aria-label="DNS and NTP trust-domain architecture">
+            <div class="flow-card">
+                <strong>dns-time-lab01</strong>
+                <span>Homelab, infrastructure, security, and management systems</span>
+            </div>
+            <div class="flow-card">
+                <strong>dns-time-home01</strong>
+                <span>Household and consumer systems</span>
+            </div>
+        </div>
+        <p>
+            The appliances do not provide cross-domain failover and do not administer one another. This preserves the
+            separation between higher-trust infrastructure and household systems.
+        </p>
+
+        <h2>Key Technologies</h2>
+        <ul class="tag-list large">
+            <li>Debian</li>
+            <li>Unbound</li>
+            <li>Chrony</li>
+            <li>Ansible</li>
+            <li>nftables</li>
+            <li>AppArmor</li>
+            <li>auditd</li>
+        </ul>
+
+        <h2>Validation-First Rollout</h2>
+        <ul class="feature-list">
+            <li>DNS initially bound only to loopback interfaces</li>
+            <li>DNSSEC behavior validated before client exposure</li>
+            <li>Chrony synchronization verified independently</li>
+            <li>Listening ports checked before access rules are introduced</li>
+            <li>Network exposure added incrementally only after runtime validation</li>
+        </ul>
+
+        <div class="callout">
+            <strong>Design philosophy:</strong> validate first, expose last.
+        </div>
+
+        <h2>What This Project Demonstrates</h2>
+        <div class="skills-grid">
+            <div>
+                <h3>Linux Infrastructure</h3>
+                <p>Minimal service-focused systems with deliberately constrained exposure.</p>
+            </div>
+            <div>
+                <h3>DNS &amp; Time Services</h3>
+                <p>Recursive DNS, DNSSEC validation, time synchronization, and service policy.</p>
+            </div>
+            <div>
+                <h3>Trust Design</h3>
+                <p>Separate service domains instead of allowing convenience to erase trust boundaries.</p>
+            </div>
+            <div>
+                <h3>Reproducibility</h3>
+                <p>Configuration and validation designed to be documented and automated over time.</p>
+            </div>
+        </div>
+
+        <div class="image-placeholder">
+            <p><strong>Optional images:</strong> add an architecture diagram, appliance photo, or validation screenshot under <code>assets/images/dns-ntp/</code>.</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="container"><p>© 2026 Paul Kelley · DNS &amp; NTP Infrastructure Project</p></div>
+</footer>
+</body>
+</html>

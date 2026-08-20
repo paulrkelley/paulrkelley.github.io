@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paul Kelley — systems, infrastructure, Microsoft 365, networking, automation, and security.">
+    <meta name="theme-color" content="#07111f">
+    <title>Paul Kelley | Systems & Infrastructure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav-container">
+        <a class="site-name" href="index.html">Paul Kelley</a>
+        <nav aria-label="Primary navigation">
+            <a href="#projects">Projects</a>
+            <a href="#approach">Approach</a>
+            <a href="#skills">Technologies</a>
+            <a href="#contact">Connect</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-content">
+            <p class="eyebrow">Systems • Infrastructure • Microsoft 365</p>
+            <h1>Building secure, documented infrastructure <span>from the ground up.</span></h1>
+            <p class="hero-description">
+                I'm Paul Kelley, an IT infrastructure professional focused on Microsoft 365, identity,
+                networking, automation, security, and systems engineering.
+            </p>
+            <p class="hero-description">
+                I use my homelab to design and document production-inspired infrastructure with an emphasis on
+                least privilege, explicit trust boundaries, reproducibility, and validation.
+            </p>
+            <div class="hero-actions">
+                <a class="button primary" href="https://www.linkedin.com/in/paulkelley1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="button" href="https://github.com/paulrkelley" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="button" href="mailto:paulryankelley@gmail.com">Email Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <p class="section-label">Featured Work</p>
+            <h2>Projects</h2>
+            <p class="section-intro">
+                Selected projects demonstrating infrastructure architecture, security engineering, automation,
+                implementation, validation, and technical documentation.
+            </p>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <p class="project-type">Infrastructure Architecture</p>
+                    <h3>Secure Homelab</h3>
+                    <p>
+                        A security-focused infrastructure environment built around segmentation, identity, PKI,
+                        secure remote access, centralized logging, virtualization, and documented trust boundaries.
+                    </p>
+                    <ul class="tag-list" aria-label="Secure Homelab technologies">
+                        <li>pfSense</li>
+                        <li>Proxmox</li>
+                        <li>PKI</li>
+                        <li>Headscale</li>
+                        <li>Security</li>
+                    </ul>
+                    <a class="project-link" href="projects/secure-homelab.html">Explore project →</a>
+                </article>
+
+                <article class="project-card">
+                    <p class="project-type">Foundational Infrastructure</p>
+                    <h3>DNS &amp; NTP Appliances</h3>
+                    <p>
+                        Dedicated DNS and time infrastructure designed around separate trust domains, controlled
+                        exposure, hardened Linux appliances, and staged validation.
+                    </p>
+                    <ul class="tag-list" aria-label="DNS and NTP technologies">
+                        <li>Debian</li>
+                        <li>Unbound</li>
+                        <li>Chrony</li>
+                        <li>Ansible</li>
+                    </ul>
+                    <a class="project-link" href="projects/dns-ntp.html">Explore project →</a>
+                </article>
+
+                <article class="project-card">
+                    <p class="project-type">Endpoint Security</p>
+                    <h3>Admin Laptop Hardening</h3>
+                    <p>
+                        A hardened Fedora administrative workstation designed for privileged infrastructure access
+                        with encryption, Secure Boot, auditing, and attack-surface reduction.
+                    </p>
+                    <ul class="tag-list" aria-label="Admin laptop technologies">
+                        <li>Fedora</li>
+                        <li>LUKS</li>
+                        <li>Secure Boot</li>
+                        <li>auditd</li>
+                    </ul>
+                    <a class="project-link" href="projects/admin-laptop.html">Explore project →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="section alternate">
+        <div class="container">
+            <p class="section-label">Engineering Mindset</p>
+            <h2>How I Approach Infrastructure</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Design the trust model first</h3>
+                    <p>Understand what should communicate before configuring how it communicates.</p>
+                </div>
+                <div>
+                    <h3>Least privilege by default</h3>
+                    <p>Access is explicitly granted rather than inherited from broad network trust.</p>
+                </div>
+                <div>
+                    <h3>Validate the runtime state</h3>
+                    <p>Configuration alone is not proof that a security or infrastructure control works.</p>
+                </div>
+                <div>
+                    <h3>Document for repeatability</h3>
+                    <p>Architecture, implementation, decisions, and validation should survive beyond the initial build.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <p class="section-label">Technology</p>
+            <h2>What I Work With</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Microsoft &amp; Identity</h3>
+                    <p>Microsoft 365, Entra ID, Intune, Active Directory, Authentik</p>
+                </div>
+                <div>
+                    <h3>Infrastructure</h3>
+                    <p>Linux, Proxmox, pfSense, DNS, NTP, VLANs, routing and switching</p>
+                </div>
+                <div>
+                    <h3>Automation &amp; Platforms</h3>
+                    <p>PowerShell, Python, Ansible, Docker, Kubernetes / k3s, Git</p>
+                </div>
+                <div>
+                    <h3>Security</h3>
+                    <p>PKI, Step CA, Headscale, bastion architecture, Security Onion, centralized logging</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section alternate">
+        <div class="container">
+            <p class="section-label">Let's Connect</p>
+            <h2>Interested in infrastructure?</h2>
+            <p class="section-intro">
+                I'm always interested in conversations around Microsoft 365, identity, infrastructure,
+                networking, automation, security, and systems engineering.
+            </p>
+            <div class="hero-actions">
+                <a class="button primary" href="https://www.linkedin.com/in/paulkelley1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="button" href="https://github.com/paulrkelley" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="button" href="mailto:paulryankelley@gmail.com">Email</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Paul Kelley · Built and hosted with GitHub Pages</p>
+    </div>
+</footer>
+</body>
+</html>
