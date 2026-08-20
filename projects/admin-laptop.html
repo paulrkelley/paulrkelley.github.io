@@ -1,118 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Administrative laptop hardening project by Paul Kelley — a dedicated Fedora workstation for privileged infrastructure access with encryption, Secure Boot, auditing, and attack-surface reduction.">
-    <meta name="theme-color" content="#07111f">
-    <title>Admin Laptop Hardening | Paul Kelley</title>
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Administrative laptop hardening project by Paul Kelley — a dedicated Fedora workstation for privileged infrastructure access with encryption, Secure Boot, auditing, and attack-surface reduction.">
+  <meta name="theme-color" content="#07111f">
+  <title>Admin Laptop Hardening | Paul Kelley</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 <header class="site-header">
-    <div class="container nav-container">
-        <a class="site-name" href="../index.html">Paul Kelley</a>
-        <nav aria-label="Primary navigation">
-            <a href="../index.html#projects">Projects</a>
-            <a href="https://github.com/paulrkelley" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/paulkelley1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </nav>
-    </div>
+  <div class="container nav-container">
+    <a class="site-name" href="../index.html">Paul Kelley</a>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="https://github.com/paulrkelley" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/paulkelley1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 <section class="project-hero">
-    <div class="container narrow">
-        <a class="back-link" href="../index.html#projects">← Back to projects</a>
-        <p class="eyebrow">Endpoint Security</p>
-        <h1>Admin Laptop Hardening</h1>
-        <p class="project-lead">
-            A dedicated administrative Linux workstation designed for privileged infrastructure access with encryption,
-            verified boot, auditing, reduced attack surface, and documented security controls.
-        </p>
-        <div class="hero-actions">
-            <a class="button primary" href="https://github.com/paulrkelley/admin-laptop-hardening-public" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
-        </div>
+  <div class="container narrow">
+    <a class="back-link" href="../index.html#projects">← Back to projects</a>
+    <p class="eyebrow">Endpoint Security</p>
+    <h1>Admin Laptop Hardening</h1>
+    <p class="project-lead">A dedicated administrative Linux workstation designed for privileged infrastructure access with encryption, verified boot, auditing, reduced attack surface, and documented security controls.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="https://github.com/paulrkelley/admin-laptop-hardening-public" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
     </div>
+  </div>
 </section>
 
 <section class="section">
-    <div class="container narrow project-content">
-        <h2>Objective</h2>
-        <p>
-            Administrative endpoints deserve stronger controls because compromising one can provide access to the
-            systems it manages. This project builds a dedicated workstation for privileged infrastructure administration.
-        </p>
+  <div class="container narrow project-content">
+    <h2>Objective</h2>
+    <p>Administrative endpoints deserve stronger controls because compromising one can provide access to the systems it manages. This project builds a dedicated workstation for privileged infrastructure administration.</p>
 
-        <h2>Security Model</h2>
-        <p>
-            The workstation is treated as part of the administrative control plane rather than as a general-purpose
-            personal computer. Security decisions prioritize integrity, auditability, and limiting unnecessary exposure.
-        </p>
+    <h2>Security Model</h2>
+    <p>The workstation is treated as part of the administrative control plane rather than as a general-purpose personal computer. Security decisions prioritize integrity, auditability, and limiting unnecessary exposure.</p>
 
-        <figure class="architecture-figure">
-            <img
-                class="project-image"
-                src="../assets/images/admin-laptop/workstation-overview.png"
-                alt="Conceptual security architecture for a hardened Fedora administrative workstation showing platform security, operating system hardening, device controls, identity controls, a controlled bastion-mediated administrative path, and privileged infrastructure destinations."
-                loading="lazy"
-            >
-            <figcaption>
-                The administrative workstation is treated as part of the control plane. Privileged access follows controlled, auditable paths rather than unrestricted direct administration.
-            </figcaption>
-        </figure>
+    <figure class="architecture-figure">
+      <img class="project-image"
+           src="../assets/images/admin-laptop/admin-laptop-overview.png"
+           alt="Conceptual security architecture for a hardened Fedora administrative workstation showing platform security, operating system hardening, device controls, identity controls, a controlled bastion-mediated administrative path, and privileged infrastructure destinations."
+           loading="lazy">
+      <figcaption>The administrative workstation is treated as part of the control plane. Privileged access follows controlled, auditable paths rather than unrestricted direct administration.</figcaption>
+    </figure>
 
-        <h2>Implemented Controls</h2>
-        <ul class="feature-list">
-            <li>LUKS full-disk encryption</li>
-            <li>Secure Boot</li>
-            <li>TPM-backed platform capabilities</li>
-            <li>auditd logging</li>
-            <li>Kernel hardening controls such as <code>ptrace_scope</code> and <code>kptr_restrict</code></li>
-            <li>Bluetooth disabled when not required</li>
-            <li>Reduced software and service footprint</li>
-            <li>Documented validation of the resulting system state</li>
-        </ul>
+    <div class="callout"><strong>Architecture principle:</strong> administrative endpoints are part of the control plane.</div>
 
-        <h2>Key Technologies</h2>
-        <ul class="tag-list large">
-            <li>Fedora</li>
-            <li>LUKS</li>
-            <li>Secure Boot</li>
-            <li>TPM</li>
-            <li>auditd</li>
-            <li>Linux Hardening</li>
-        </ul>
+    <h2>Physical Workstation</h2>
+    <p>The project is implemented on a dedicated Dell Latitude 3520 running Fedora Linux. Keeping the administrative endpoint purpose-specific helps separate privileged infrastructure work from ordinary personal computing.</p>
 
-        <h2>What This Project Demonstrates</h2>
-        <div class="skills-grid">
-            <div>
-                <h3>Linux Administration</h3>
-                <p>Building and maintaining a purpose-specific administrative workstation.</p>
-            </div>
-            <div>
-                <h3>Endpoint Security</h3>
-                <p>Applying layered controls appropriate to a privileged administrative endpoint.</p>
-            </div>
-            <div>
-                <h3>Risk Analysis</h3>
-                <p>Choosing controls based on the workstation's role in the broader management plane.</p>
-            </div>
-            <div>
-                <h3>Validation &amp; Documentation</h3>
-                <p>Recording controls and verifying that intended protections are actually active.</p>
-            </div>
-        </div>
+    <figure>
+      <img class="project-image"
+           src="../assets/images/admin-laptop/admin-laptop-physical.png"
+           alt="Physical Dell Latitude administrative laptop used for the hardened Fedora workstation project."
+           loading="lazy">
+      <figcaption>The dedicated physical workstation used for privileged infrastructure administration.</figcaption>
+    </figure>
 
-        <div class="image-placeholder">
-            <p><strong>Workstation photo and validation evidence coming soon:</strong> this section can later show the physical administrative laptop and a sanitized verification of encryption, Secure Boot, and hardening controls.</p>
-        </div>
+    <h2>Implemented Controls</h2>
+    <ul class="feature-list">
+      <li>LUKS full-disk encryption</li>
+      <li>Secure Boot</li>
+      <li>TPM-backed platform capabilities</li>
+      <li>auditd logging</li>
+      <li>Kernel hardening controls such as <code>ptrace_scope</code> and <code>kptr_restrict</code></li>
+      <li>Bluetooth disabled when not required</li>
+      <li>Reduced software and service footprint</li>
+      <li>Documented validation of the resulting system state</li>
+    </ul>
+
+    <h2>Key Technologies</h2>
+    <ul class="tag-list large">
+      <li>Fedora</li><li>LUKS</li><li>Secure Boot</li><li>TPM</li><li>auditd</li><li>Linux Hardening</li>
+    </ul>
+
+    <h2>What This Project Demonstrates</h2>
+    <div class="skills-grid">
+      <div><h3>Linux Administration</h3><p>Building and maintaining a purpose-specific administrative workstation.</p></div>
+      <div><h3>Endpoint Security</h3><p>Applying layered controls appropriate to a privileged administrative endpoint.</p></div>
+      <div><h3>Risk Analysis</h3><p>Choosing controls based on the workstation's role in the broader management plane.</p></div>
+      <div><h3>Validation &amp; Documentation</h3><p>Recording controls and verifying that intended protections are actually active.</p></div>
     </div>
+  </div>
 </section>
 </main>
 
 <footer>
-    <div class="container"><p>© 2026 Paul Kelley · Administrative Laptop Hardening Project</p></div>
+  <div class="container"><p>© 2026 Paul Kelley · Administrative Laptop Hardening Project</p></div>
 </footer>
 </body>
 </html>
